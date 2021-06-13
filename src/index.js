@@ -121,7 +121,7 @@ var seccion = React.createElement('section',{id: 'content'},
         <p>La química es la ciencia que estudia tanto la composición, como la estructura y las propiedades de la materia como los cambios que esta experimenta durante las reacciones químicas y su relación con la energía.​</p>,
         React.createElement('p','',
         React.createElement('a',{href:''},
-        <img src="public/photo1" alt="Química"/>)));
+        <img src="photo1.jpg" alt="Química" class="img"/>)));
 
 ReactDOM.render([header,seccion],document.getElementById('Factory'));
 
