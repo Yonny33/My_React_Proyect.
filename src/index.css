@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ingredientes {
+  margin-left: 20px;
+}
+
+.l_ingredientes {
+  margin-left: 20px;
+}
+
+.pasos {
+  margin-left: 20px;
+}
+
+.l_pasos {
+  margin-left: 25px;
+}
+
+.img_pan {
+  margin-top: 20px;
+  width: 850px;
+  height: 430px;
+}
+
+.List{
+  margin-left: 25px;
+}
