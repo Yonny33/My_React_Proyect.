@@ -4,12 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById("root"));
 
 //Lista
 var listElement1 = React.createElement('li',{id:'item1',class: "List",type:'circle'},'List1');
@@ -20,7 +15,7 @@ var listElement5 = React.createElement('li',{id:'item5',class: "List",type:'a'},
 var listElement6 = React.createElement('li',{id:'item6',class: "List",type:'A'},'List6');
 
 var elements = [listElement1,listElement2,listElement3,
-            listElement4,listElement5, listElement6];
+        listElement4,listElement5, listElement6];
 
 var listOfElements = React.createElement('lu','',elements);
 
@@ -56,47 +51,79 @@ var pasos = <div className='pasos'>
         <p>Ahora que ya tienes los ingredientes medidos 
         y preparados sigue los siguientes pasos para lograr hacer tu pan.</p>
         <div class='l_pasos'>
-            <ol>
-                <li>
-                Primero hay que hidratar la levadura. Ponn la levadura 
-                con un poco de agua, el aceite y el azúcar. Revuelve hasta 
-                que este todo disuelto.
-                </li>
-                <li>
-                Incorpora 5 cda. De harina y cuando esté todo integrado 
-                deja reposar aprox 10 minutos. Tapado con repasador.
-                </li>
-                <li>
-                Termina de incorporar La harina junto con la sal y el agua.
-                </li>
-                <li>
-                Amasa durante unos 2 minutos aprox. Y deja reposar unos 30 minutos.
-                </li>
-                <li>
-                Saca el aire amasando un poco más y forma un bollo que debes colocar
-                en la asadera aceitada.
-                </li>
-                <li>
-                Aplica unos cortes y espolvorea con harina.
-                </li>
-                <li>
-                Tapa con un recipiente apto de horno y aceitado. 
-                Esto es para conservar la humedad.
-                </li>
-                <li>
-                Por último lleva al horno recién encendido a 200 grados celsius, 
-                fuego arriba y abajo, durante 45 minutos aprox.
-                </li>
-            </ol>
-        </div>
-        <p>Ya haz hecho tu primer pan, ahora disfrútalo.</p>
-    </div>;
+
+                <ol>
+                        <li>
+                        Primero hay que hidratar la levadura. Ponn la levadura 
+                        con un poco de agua, el aceite y el azúcar. Revuelve hasta 
+                        que este todo disuelto.
+                        </li>
+                        <li>
+                        Incorpora 5 cda. De harina y cuando esté todo integrado 
+                        deja reposar aprox 10 minutos. Tapado con repasador.
+                        </li>
+                        <li>
+                        Termina de incorporar La harina junto con la sal y el agua.
+                        </li>
+                        <li>
+                        Amasa durante unos 2 minutos aprox. Y deja reposar unos 30 minutos.
+                        </li>
+                        <li>
+                        Saca el aire amasando un poco más y forma un bollo que debes colocar
+                        en la asadera aceitada.
+                        </li>
+                        <li>
+                        Aplica unos cortes y espolvorea con harina.
+                        </li>
+                        <li>
+                        Tapa con un recipiente apto de horno y aceitado. 
+                        Esto es para conservar la humedad.
+                        </li>
+                        <li>
+                        Por último lleva al horno recién encendido a 200 grados celsius, 
+                        fuego arriba y abajo, durante 45 minutos aprox.
+                        </li>
+                </ol>
+                </div>
+                <p>Ya haz hecho tu primer pan, ahora disfrútalo.</p>
+        </div>;
 
 ReactDOM.render(pan_imagen,document.getElementById('img_pan'));
 ReactDOM.render(<h1 align='center'> Receta de pan, fácil de hacer</h1>,
 document.getElementById('titulo'));
 ReactDOM.render(ingredientes,document.getElementById('ingredientes'));
-ReactDOM.render(pasos,document.getElementById('pasos'));
+ReactDOM.render(pasos, document.getElementById('pasos'));
+
+//Lista Factory
+var lista_fac = React.createFactory('li');
+
+var l1 = lista_fac('',
+        React.createElement('a',{href:''},'Física'));
+var l2 = lista_fac({id: 'selected'},<a href="">Química</a>);
+var l3 = lista_fac({},<a href="">Biología</a>);
+var l4 = lista_fac({},<a href="">Inglés</a>);
+var l5 = lista_fac({},<a href="">Sociales</a>);
+var l6 = lista_fac({},<a href="">Historia</a>);
+var l7 = lista_fac({},<a href="">Deporte</a>);
+var lista =[l1,l2,l3,l4,l5,l6,l7]; 
+
+var header=<header>
+        <h1>Pestañas con React</h1>
+        <nav>
+                <ul>
+                {lista}
+                </ul>
+        </nav>
+        </header>;
+
+var seccion = React.createElement('section',{id: 'content'},
+        <p>Ejemplo de pestañas creadas con elementos estáticos de React y CSS.</p>,
+        <p>La química es la ciencia que estudia tanto la composición, como la estructura y las propiedades de la materia como los cambios que esta experimenta durante las reacciones químicas y su relación con la energía.​</p>,
+        React.createElement('p','',
+        React.createElement('a',{href:''},
+        <img src="public/photo1" alt="Química"/>)));
+
+ReactDOM.render([header,seccion],document.getElementById('Factory'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
