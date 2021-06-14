@@ -21,6 +21,7 @@ class Ingreso extends Component {
             </div>
             <input class="form-control" type="password" placeholder="Contraseña"/>
             </div>
+                <button type="submit" class="btn btn-primary">Ingreso</button>
         </form>
         </div>
         );

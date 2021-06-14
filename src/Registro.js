@@ -109,9 +109,7 @@ export default class Form extends Component {
                 </label>
             </div>
             </div>
-            <button type="submit" class="btn btn-primary">
-            {this.props.buttonName}
-            </button>
+            <button type="submit" class="btn btn-primary">Registro</button>
         </div>
         );
     }
