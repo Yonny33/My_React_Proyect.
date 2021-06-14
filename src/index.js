@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById("root"));
 
+
+
 //Lista
 var listElement1 = React.createElement('li',{id:'item1',class: "List",type:'circle'},'List1');
 var listElement2 = React.createElement('li',{id:'item2',class: "List",type:'disc'},'List2');
@@ -108,7 +110,7 @@ var l7 = lista_fac({},<a href="">Deporte</a>);
 var lista =[l1,l2,l3,l4,l5,l6,l7]; 
 
 var header=<header>
-        <h1>Pestañas con React</h1>
+        <h1 class="h1">Pestañas con React</h1>
         <nav>
                 <ul>
                 {lista}
@@ -117,11 +119,11 @@ var header=<header>
         </header>;
 
 var seccion = React.createElement('section',{id: 'content'},
-        <p>Ejemplo de pestañas creadas con elementos estáticos de React y CSS.</p>,
-        <p>La química es la ciencia que estudia tanto la composición, como la estructura y las propiedades de la materia como los cambios que esta experimenta durante las reacciones químicas y su relación con la energía.​</p>,
+        <p class="p">Ejemplo de pestañas creadas con elementos estáticos de React y CSS.</p>,
+        <p class="p">La química es la ciencia que estudia tanto la composición, como la estructura y las propiedades de la materia como los cambios que esta experimenta durante las reacciones químicas y su relación con la energía.​</p>,
         React.createElement('p','',
         React.createElement('a',{href:''},
-        <img src="photo1.jpg" alt="Química" class="img"/>)));
+        <img src="https://conceptodefinicion.de/wp-content/uploads/2014/07/Qu%C3%ADmica.jpg" alt="Química" class="img"/>)));
 
 ReactDOM.render([header,seccion],document.getElementById('Factory'));
 

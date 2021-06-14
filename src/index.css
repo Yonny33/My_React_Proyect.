@@ -55,8 +55,16 @@ nav ul {
   margin-left: 25px;
 }
 
+.h1{
+  text-align: center;
+}
+
+.p{
+  margin-left: 20px;
+}
+
 .img{
-  margin-top: 20px;
-  width: 850px;
-  height: 430px;
+    margin-left: 20px;
+    width: 850px;
+    height: 430px;
 }
