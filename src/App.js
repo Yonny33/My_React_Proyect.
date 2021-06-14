@@ -17,24 +17,6 @@ export class App extends React.Component {
             Página de NextU
           </a>
         </header>
-      <div class='border rounded login m-5 container'>
-      <h2>Ingreso</h2>
-      <form>
-        <div class="input-group pb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fa fa-envelope-o fa-fw"></i></span>
-          </div>
-          <input class="form-control" type="text" placeholder="Correo Electrónico"/>
-        </div>
-        <div class="input-group pb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fa fa-key fa-fw"></i></span>
-          </div>
-          <input class="form-control" type="password" placeholder="Contraseña"/>
-            </div>
-            <button type="submit" class="btn btn-success m-2" onclick="return validar(this.form)">Continuar</button>
-      </form>
-      </div>
       </div>
     );
   };

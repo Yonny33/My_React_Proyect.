@@ -3,8 +3,21 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import Form from "./Registro";
+import Ingreso from "./Ingreso";
 
-ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById("root"));
+
+ReactDOM.render(<React.StrictMode><App /></React.StrictMode>, document.getElementById("root"));
+
+ReactDOM.render(<Ingreso />,
+
+        document.getElementById("Ingreso"));
+
+//Formulario de Registro
+ReactDOM.render(<Form formName='Registro Personal' input1='Primer Nombre' input2='Apellido'
+        input3='Correo Electrónico' input4='Contraseña' input5='Dirección' input6='Ciudad' 
+        input7='Código Postal' buttonName='Guardar'/>,
+document.getElementById('Registro'));
 
 
 
