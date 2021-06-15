@@ -5,6 +5,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Form from "./Registro";
 import Ingreso from "./Ingreso";
+import Barra from "./Barra";
+
 
 
 ReactDOM.render(<React.StrictMode><App /></React.StrictMode>, document.getElementById("root"));
@@ -138,7 +140,11 @@ var seccion = React.createElement('section',{id: 'content'},
         React.createElement('a',{href:''},
         <img src="https://conceptodefinicion.de/wp-content/uploads/2014/07/Qu%C3%ADmica.jpg" alt="Química" class="img"/>)));
 
-ReactDOM.render([header,seccion],document.getElementById('Factory'));
+ReactDOM.render([header, seccion], document.getElementById('Factory'));
+
+//Barra
+ReactDOM.render(<Barra />, document.getElementById("Barra"));
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
